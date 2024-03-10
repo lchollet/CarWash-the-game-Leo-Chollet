@@ -1,7 +1,7 @@
 <p align="center">
     <img src="./logo.svg" alt="VAV Logo" align="center"/>
 </p>
-<h1 align="center">Vue + A-Frame + Vite boilerplate</h1>
+<h1 align="center">Vue + A-Frame + Vite - CarWash the game</h1>
 
 > A boilerplate for A-Frame 1.5, Vue 3.4 and Vite 5.0
 

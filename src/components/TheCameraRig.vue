@@ -44,7 +44,7 @@
         physx-grab
       >
         <a-sphere id="hand-left-collider"
-          radius="0.02"
+          radius="0.1"
           visible="false"
           physx-body="type: kinematic; emitCollisionEvents: true">
         </a-sphere>
@@ -58,7 +58,7 @@
         physx-grab
       >
         <a-sphere id="hand-right-collider"
-          radius="0.02"
+          radius="0.1"
           visible="false"
           physx-body="type: kinematic; emitCollisionEvents: true">
         </a-sphere>

@@ -18,9 +18,10 @@
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>A-Frame + Vite + Vue Boilerplate</h1>
-      <p v-if="!loaded">loading...</p>
-      <button v-if="loaded" @click="enterScene()">Enter scene</button>
+      <h1>CarWash the game, Léo Chollet</h1>
+      <p v-if="!loaded">Chargement de toutes cettes histoire...</p>
+      <button v-if="loaded" @click="enterScene()">Entrer sur la scène de lavage</button>
+      <p>Dans ce jeux vous êtes laveur de voiture, bloqué sur un île carwash, votre seule possibilité pour sortir : laver la voiture en moins de une minutes.. Courage !</p>
       <div class="licences">
       <section>
         <h4>Movement modes support</h4>
@@ -68,18 +69,23 @@
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e" target="_blank">VR Gallery</a>
+            <a href="https://sketchfab.com/3d-models/modular-factory-button-50f3011929a247418b6c3c46614c53b8" target="_blank">Modular Factory Button 3d-models</a>
           </dt><dd>
-            by <a href="https://sketchfab.com/mvrc.art" target="_blank">Maxim Mavrichev</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+            By somguypc under CC Attribution
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1" target="_blank">Physic room model</a>
+            <a href="https://sketchfab.com/3d-models/classic-muscle-car-641efc889e5f4543bae51d0922e6f4b3" target="_blank">Classic Muscle car 3d-models</a>
           </dt><dd>
-            by <a href="https://sketchfab.com/tekuto1s" target="_blank">tekuto1s</a>
-            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+            By Lexyc16 under CC Attribution
           </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/gas-station-7b7e3930724c4ed28b16c1f897e63f83" target="_blank">Gas Station 3d-models</a>
+          </dt><dd>
+            By Yanez Designs under CC Attribution
+          </dd>
+
         </dl>
       </div>
     </div>
