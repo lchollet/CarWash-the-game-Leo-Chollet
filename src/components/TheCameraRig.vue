@@ -1,9 +1,35 @@
 <script setup>
+  import { ref } from 'vue';
   import '../aframe/disable-in-vr.js';
   import '../aframe/hide-in-vr.js';
   import '../aframe/simple-navmesh-constraint.js';
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
+
+  const bubbleCount = ref(0);
+
+  const onBubblePopped = () => {
+    bubbleCount.value++;
+    console.log('Bubbles popped:', bubbleCount.value);
+
+    // Vibrate controller if available
+    if (navigator.xr && navigator.xr.isSessionSupported) {
+      navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+        if (supported) {
+          navigator.xr.requestSession('immersive-vr').then((session) => {
+            session.requestAnimationFrame(() => {
+              const gamepads = session.inputSources;
+              gamepads.forEach(gamepad => {
+                if (gamepad.handedness === 'left' || gamepad.handedness === 'right') {
+                  gamepad.hapticActuators[0].pulse(0.5, 100); // Vibrate for 100ms with 0.5 intensity
+                }
+              });
+            });
+          });
+        }
+      });
+    }
+  };
 </script>
 
 <template>
@@ -46,7 +72,8 @@
         <a-sphere id="hand-left-collider"
           radius="0.1"
           visible="false"
-          physx-body="type: kinematic; emitCollisionEvents: true">
+          physx-body="type: kinematic; emitCollisionEvents: true"
+          @collisionstart="onBubblePopped">
         </a-sphere>
       </a-entity>
 
@@ -60,7 +87,8 @@
         <a-sphere id="hand-right-collider"
           radius="0.1"
           visible="false"
-          physx-body="type: kinematic; emitCollisionEvents: true">
+          physx-body="type: kinematic; emitCollisionEvents: true"
+          @collisionstart="onBubblePopped">
         </a-sphere>
       </a-entity>
 

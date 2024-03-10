@@ -156,6 +156,20 @@ function buttonManager() {
     >
     </a-sphere>
 
+    <a-sphere
+      id="bubble-9"
+      position="-3.3 1.2 7.5"
+      radius="0.03"
+      color="#84d1e8"
+      visible="true"
+      clickable
+      bubble-pop="bubble: #bubble-8; on: click;"
+      listen-to="target: #bubble-8; event: contactbegin; emit: click"
+      physx-body="type: static; emitCollisionEvents: true"
+      sound="src: #sound-2; on: click"
+    >
+    </a-sphere>
+
     <a-box
       position="-6 0.63 10"
       width="0.5"
