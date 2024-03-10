@@ -203,6 +203,14 @@ function buttonManager() {
       id="timer-box1"
     ></a-text>
 
+    <a-text
+      id="bubble-counter"
+      scale="2 2 2"
+      position="4 2.7 6"
+      rotation="0 -90 0"
+      value="Bubbles popped: 0"
+    ></a-text>
+
     <a-ocean
       color="#92E2E2"
       width="100"
