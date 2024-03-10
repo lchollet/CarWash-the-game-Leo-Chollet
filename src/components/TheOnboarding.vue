@@ -21,7 +21,9 @@
       <h1>CarWash the game, Léo Chollet</h1>
       <p v-if="!loaded">Chargement de toutes cettes histoire...</p>
       <button v-if="loaded" @click="enterScene()">Entrer sur la scène de lavage</button>
-      <p>Dans ce jeux vous êtes laveur de voiture, bloqué sur un île carwash, votre seule possibilité pour sortir : laver la voiture en moins de 30s.. Courage !</p>
+      <p>Dans ce jeux vous êtes laveur de voiture, bloqué sur un île carwash, votre seule possibilité pour sortir : laver la voiture en moins de 30s.. Courage !
+        Approcher vos mains des bulles pour les éclater, et appuyer sur le bouton pour lancer le chrono. Bonne chance !
+      </p>
       <div class="licences">
       <section>
         <h4>Movement modes support</h4>
