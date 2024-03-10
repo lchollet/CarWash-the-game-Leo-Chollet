@@ -8,7 +8,6 @@ import "../aframe/chronometer.js";
 import "../aframe/bubble-pop.js";
 import "../aframe/listen-to.js";
 
-
 defineProps({
   scale: Number,
   buttonIsPressed: Boolean,
@@ -158,13 +157,69 @@ function buttonManager() {
 
     <a-sphere
       id="bubble-9"
-      position="-3.3 1.2 7.5"
+      position="-3.3 1.1 7.5"
       radius="0.03"
       color="#84d1e8"
       visible="true"
       clickable
-      bubble-pop="bubble: #bubble-8; on: click;"
-      listen-to="target: #bubble-8; event: contactbegin; emit: click"
+      bubble-pop="bubble: #bubble-9; on: click;"
+      listen-to="target: #bubble-9; event: contactbegin; emit: click"
+      physx-body="type: static; emitCollisionEvents: true"
+      sound="src: #sound-2; on: click"
+    >
+    </a-sphere>
+
+    <a-sphere
+      id="bubble-10"
+      position="-3.3 1.1 8.5"
+      radius="0.07"
+      color="#84d1e8"
+      visible="true"
+      clickable
+      bubble-pop="bubble: #bubble-10; on: click;"
+      listen-to="target: #bubble-10; event: contactbegin; emit: click"
+      physx-body="type: static; emitCollisionEvents: true"
+      sound="src: #sound-2; on: click"
+    >
+    </a-sphere>
+
+    <a-sphere
+      id="bubble-11"
+      position="-3.3 1.1 8"
+      radius="0.07"
+      color="#84d1e8"
+      visible="true"
+      clickable
+      bubble-pop="bubble: #bubble-11; on: click;"
+      listen-to="target: #bubble-11; event: contactbegin; emit: click"
+      physx-body="type: static; emitCollisionEvents: true"
+      sound="src: #sound-2; on: click"
+    >
+    </a-sphere>
+
+    <a-sphere
+      id="bubble-12"
+      position="-2.7 1.25 8"
+      radius="0.07"
+      color="#84d1e8"
+      visible="true"
+      clickable
+      bubble-pop="bubble: #bubble-12; on: click;"
+      listen-to="target: #bubble-12; event: contactbegin; emit: click"
+      physx-body="type: static; emitCollisionEvents: true"
+      sound="src: #sound-2; on: click"
+    >
+    </a-sphere>
+
+    <a-sphere
+      id="bubble-13"
+      position="1.13 1.25 8"
+      radius="0.07"
+      color="#84d1e8"
+      visible="true"
+      clickable
+      bubble-pop="bubble: #bubble-13; on: click;"
+      listen-to="target: #bubble-13; event: contactbegin; emit: click"
       physx-body="type: static; emitCollisionEvents: true"
       sound="src: #sound-2; on: click"
     >
@@ -210,12 +265,6 @@ function buttonManager() {
       value="00:00:00"
       id="timer-box"
     ></a-text>
-    <a-text
-      scale="3 3 3"
-      position="-1.8 2.7 6"
-      value="00:00:00"
-      id="timer-box1"
-    ></a-text>
 
     <a-text
       id="bubble-counter"
@@ -224,6 +273,18 @@ function buttonManager() {
       rotation="0 -90 0"
       value="Bubbles popped: 0"
     ></a-text>
+
+    <a-text
+      id="congratulation-message"
+      scale="2 2 2"
+      position="4 1.7 6"
+      rotation="0 -90 0"
+      visible="false"
+      value="Congratulations! 
+      You popped all bubbles!"
+      color="green"
+    ></a-text>
+    >
 
     <a-ocean
       color="#92E2E2"

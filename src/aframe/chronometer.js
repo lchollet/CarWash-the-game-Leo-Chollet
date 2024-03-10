@@ -16,9 +16,7 @@ AFRAME.registerComponent("chronometer", {
   chrono: function (t, dt) {
     if (this.data.stop) return;
 
-    // Check if timer has reached one minute
-    if (this.minutes >= 1) {
-      // Stop the timer
+    if (this.seconds >= 30) {
       this.data.stop = true;
       return;
     }
